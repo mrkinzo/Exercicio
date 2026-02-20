@@ -1,13 +1,36 @@
- package Jogo;
- import java.util.*;
+package Jogo;
+
+import java.util.*;
+
 public class Player {
-    Itens item;
+    public Player() {
+    }
+
+    private String nome;
+    private Itens item;
     static List<Itens> inventario;
-    public static void main(String[] args) {
-        Itens item =new Itens("cajado");
-        Itens item2=new Itens("Wilson");
-        inventario.add(item2);
-        inventario.add(item);
-        
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Itens getItem() {
+        return item;
+    }
+
+    public void setItem(Itens item) {
+        this.item = item;
+    }
+
+    public static List<Itens> getInventario() {
+        return inventario;
+    }
+
+    public static void setInventario(List<Itens> inventario) {
+        Player.inventario = inventario;
     }
 }
